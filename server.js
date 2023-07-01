@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const colors = require("colors");
 const userRouters = require("./routes/routes1");
-const { notFound, errorHandler } = require("./middleware/errorMiddleWare");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 dotenv.config();
 connectDB();
 
