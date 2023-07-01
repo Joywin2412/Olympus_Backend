@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const userModel = mongoose.Schema(
   {
-    Name: { type: String },
+    Name: { type: String ,unique : true},
     Email: { type: String, unique: true },
     Password: { type: String },
     Phone: { type: String, unique: true },
@@ -29,3 +29,4 @@ module.exports = mongoose.model("user", userModel);
 // Password
 // Phone
 // Location
+// We keeping name unique as it will be username
